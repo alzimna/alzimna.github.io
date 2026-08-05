@@ -5,17 +5,30 @@
 
 nav.parent-nav {
   position: fixed;
-  top: 30px;
+  top: var(--theme-toggle-top);
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
-  width: 23%;
+  width: 100%;
   max-width: var(--nav-width);
   border-radius: 25px;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: var(--nav-bg);
+  height: auto; /* border jadi bukan masalah*/
   border: 1px solid var(--nav-border);
+}
+
+nav.parent-toggle {
+  position: fixed;
+  top: var(--theme-toggle-top);
+  left: 100%;
+  transform: translateX(-120%);
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .nav-mobile-toggle {
@@ -38,7 +51,7 @@ ul.nav li {
 }
 
 ul.nav a {
-  height: var(--nav-height);
+  height: 45px;
   flex-grow: 1;
   text-decoration: none;
   color: var(--nav-link);
@@ -69,17 +82,93 @@ ul.nav li.hover:hover a {
 
 ul.nav .animation {
   position: absolute;
-  height: 46px;
-  width: 150px;
+  height: 48px;
   border-radius: 25px;
-  background-color: var(--nav-active-bg);
   transition: all 0.5s ease;
   z-index: 1;
 }
 
-@media (max-width: 1000px) {
+.theme-toggle, .github{
+  width: var(--theme-toggle-width);
+  height: var(--theme-toggle-height);
+  border: 1px solid var(--toggle-border);
+  border-radius: 50%;
+  background: var(--toggle-bg);
+  color: var(--toggle-icon);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.theme-toggle:hover, .github:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+.theme-toggle:active, .github:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.theme-toggle .icon {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  padding: 3px;
+}
+
+.theme-toggle .icon svg {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+body[data-theme='dark'] .theme-toggle .icon-sun {
+  opacity: 0;
+  transform: rotate(-110deg) scale(0.35);
+}
+
+body[data-theme='dark'] .theme-toggle .icon-moon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+body[data-theme='light'] .theme-toggle .icon-sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+body[data-theme='light'] .theme-toggle .icon-moon {
+  opacity: 0;
+  transform: rotate(110deg) scale(0.35);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.menu-divider hr {
+    border-top: 2px solid var(--border-color);
+}
+
+/* ================= Setting for 650 <= width <= 1000 ================= */
+@media (max-width : 1000px) {
   :root {
-    --nav-width: 500px;
+    --nav-width: 350px;
   }
 
   nav.parent-nav {
@@ -87,9 +176,11 @@ ul.nav .animation {
   }
 }
 
-@media (max-width: 650px) {
+/* ================= Setting for width <= 650 ================= */
+/* 650 => mobile mode */
+@media (max-width : 650px) {
   :root {
-    --nav-width: 220px;
+    --nav-width: 150px;
   }
 
   nav.parent-nav {
@@ -100,6 +191,10 @@ ul.nav .animation {
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: var(--nav-bg);
+  }
+
+  .github {
+    display: none;
   }
 
   .nav-mobile-toggle {
@@ -117,6 +212,7 @@ ul.nav .animation {
     cursor: pointer;
     -webkit-font-smoothing: antialiased;
     text-rendering: geometricPrecision;
+    font-family: var(--font-primary);
   }
 
   .nav-mobile-toggle::after {
@@ -197,103 +293,5 @@ ul.nav .animation {
   ul.nav a {
     height: 34px;
     font-size: 12px;
-  }
-}
-
-/* Theme toggle button */
-.theme-toggle {
-  position: fixed;
-  top: var(--theme-toggle-top);
-  left: 43%;
-  margin-left: calc((var(--nav-width) / 2) + 12px);
-  width: var(--theme-toggle-width);
-  height: var(--theme-toggle-height);
-  border: 1px solid var(--toggle-border);
-  border-radius: 50%;
-  background: var(--toggle-bg);
-  color: var(--toggle-icon);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 3;
-  transition: transform 0.25s ease, border-color 0.25s ease;
-}
-
-.theme-toggle:hover {
-  transform: translateY(-2px) scale(1.03);
-}
-
-.theme-toggle:active {
-  transform: translateY(0) scale(0.98);
-}
-
-.theme-toggle .icon {
-  position: absolute;
-  width: 70%;
-  height: 70%;
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.35s ease, opacity 0.35s ease;
-  padding: 3px;
-}
-
-.theme-toggle .icon svg {
-  width: 100% !important;
-  height: 100% !important;
-  display: block;
-}
-
-body[data-theme='dark'] .theme-toggle .icon-sun {
-  opacity: 0;
-  transform: rotate(-110deg) scale(0.35);
-}
-
-body[data-theme='dark'] .theme-toggle .icon-moon {
-  opacity: 1;
-  transform: rotate(0deg) scale(1);
-}
-
-body[data-theme='light'] .theme-toggle .icon-sun {
-  opacity: 1;
-  transform: rotate(0deg) scale(1);
-}
-
-body[data-theme='light'] .theme-toggle .icon-moon {
-  opacity: 0;
-  transform: rotate(110deg) scale(0.35);
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-@media (max-width: 650px) {
-  :root {
-    --theme-toggle-top: 34px;
-  }
-}
-
-@media (max-width: 550px) {
-  .theme-toggle {
-    margin-left: calc((var(--nav-width) / 2) + 10px);
-  }
-}
-
-@media (max-width: 450px) {
-  :root {
-    --theme-toggle-width: 40px;
-    --theme-toggle-height: 40px;
-    --theme-toggle-top: 36px;
   }
 }

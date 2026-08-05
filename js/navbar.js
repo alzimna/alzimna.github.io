@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!navElement || !navList) return;
 
-    const navLinks = navList.querySelectorAll('li');
-    const navAnchors = navList.querySelectorAll('li a');
+    let navLinks = navList.querySelectorAll('li');
+    let navAnchors = navList.querySelectorAll("li a");
     const animationDiv = navList.querySelector('.animation');
     const mobileBreakpoint = 650;
 
@@ -26,11 +26,36 @@ document.addEventListener('DOMContentLoaded', () => {
         return window.innerWidth <= mobileBreakpoint;
     }
 
-    function updateToggleLabel() {
+    const githubli = document.createElement("li");
+    const githuba = document.createElement("a");
+
+    githuba.textContent = "GitHub";
+    githuba.href = "https://alzimna.github.io/";
+    githubli.appendChild(githuba);
+
+    const divider = document.createElement("li");
+    divider.className = "menu-divider";
+    divider.innerHTML = "<hr>";
+
+    function updateGithub() {
+        if (isMobile()) {
+            if (!navList.contains(githubli)) {
+                animationDiv.before(divider);
+                animationDiv.before(githubli);
+            }
+        } else {
+            divider.remove();
+            githubli.remove();
+        }
+    }
+
+    function updateActiveWeightClass() {
+        navAnchors = navList.querySelectorAll("li a");
+        navAnchors.forEach((anchor) => anchor.classList.remove('fw-semibold'));
         if (!activeLink) return;
         const activeAnchor = activeLink.querySelector('a');
         if (activeAnchor) {
-            mobileToggle.textContent = activeAnchor.textContent.trim();
+            activeAnchor.classList.add('fw-semibold');
         }
     }
 
@@ -46,16 +71,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function resetActiveState() {
+        navLinks = navList.querySelectorAll('li');
+        navAnchors = navList.querySelectorAll("li a");
         navLinks.forEach((link) => link.classList.remove('active', 'hover'));
         navAnchors.forEach((anchor) => anchor.classList.remove('fw-semibold'));
     }
 
-    function updateActiveWeightClass() {
-        navAnchors.forEach((anchor) => anchor.classList.remove('fw-semibold'));
+    function updateToggleLabel() {
         if (!activeLink) return;
         const activeAnchor = activeLink.querySelector('a');
         if (activeAnchor) {
-            activeAnchor.classList.add('fw-semibold');
+            mobileToggle.textContent = activeAnchor.textContent.trim();
         }
     }
 
@@ -69,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const currentPath = normalizePath(window.location.pathname);
 
+    navAnchors = navList.querySelectorAll('li a');
     navAnchors.forEach((anchor) => {
         const anchorPath = normalizePath(anchor.pathname);
         if (anchorPath === currentPath) {
@@ -82,10 +109,12 @@ document.addEventListener('DOMContentLoaded', () => {
         activeLink.classList.add('active');
     }
 
+    updateGithub();
     updateActiveWeightClass();
     updateToggleLabel();
     updatePointer(activeLink);
 
+    navLinks = navList.querySelectorAll('li');
     navLinks.forEach((link) => {
         link.addEventListener('mouseenter', () => {
             // if (isMobile()) return;
@@ -129,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('resize', () => {
+        updateGithub();
         if (!isMobile()) {
             closeMobileMenu();
             updatePointer(activeLink);
