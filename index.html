@@ -13,6 +13,8 @@
   <title>Alzimna Badril Umam | Quantitative Risk Researcher | Actuarial Modelling | Programming Enthusiast</title>
 
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/index.css">
+
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 
   <!-- Tulis Latex di HTML -->
@@ -75,38 +77,64 @@
 
   <main class="main-slide-show">
     <header>
-        <section class="hero" id="home">
-          <div class="hero-image-wrap">
-            <img class="hero-image" src="/image/profile.png" alt="Portrait of Alzimna Badril Umam">
-          </div>
+        <section>
+          <div class="hero" id="home">
+            <span class="hero-text mobile">Hello fellas!</span>
 
-          <div class="hero-content">
-            <h1 class="hero-title fw-bold">
-                <span>Alzimna Badril Umam,</span><br>
-                Actuarial Research Assistant
-            </h1>
-
-            <p class="hero-subtitle">
-                M.Sc. in Mathematics<br> Universitas Gadjah Mada
-            </p>
-            <a class="hero-email fw-regular" href="mailto:alzimumam@gmail.com">alzimumam@gmail.com</a>
-
-            <div class="hero-actions">
-              <a class="hero-btn hero-btn-primary light-shadow fw-semibold" href="https://drive.google.com/file/d/1wtNA8u8rsOrNdFmhOxT9R5yrurqOwXM0/view?usp=sharing">Download CV</a>
+            <div class="hero-image-wrap mobile">
+              <img class="hero-image" src="/image/profile.png" alt="Portrait of Alzimna Badril Umam">
             </div>
-          </div>
+
+            <div class="hero-content">
+              <span class="hero-text web">Hello fellas!</span>
+              <h1 class="hero-title fw-bold">
+                  <span class = "name">Alzimna Badril Umam</span>
+                  <div class="typewriter-effect">
+                    <div class="text" id="typewriter-text"></div>
+                  </div>
+              </h1>
+
+              <p class="hero-subtitle">
+                  M.Sc. in Mathematics<br> Universitas Gadjah Mada
+              </p>
+
+              <p class="hero-text">
+              I'm a mathematician studying Statistics who enjoys sharing knowledge and making it more accessible. 
+              Curious about Tech and Competitive Programming.
+              </p>
+              
+              <div class="hero-actions">
+                <a class="hero-btn hero-btn-primary light-shadow fw-semibold" 
+                  href="https://drive.google.com/file/d/1wtNA8u8rsOrNdFmhOxT9R5yrurqOwXM0/view?usp=sharing">
+                  Download CV
+                  <i class="fa-solid fa-download"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-image-wrap web">
+              <img class="hero-image" src="/image/profile.png" alt="Portrait of Alzimna Badril Umam">
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+              <a href="#about" class="scroll-btn">
+                Scroll Down For More
+                <i class="fa-solid fa-chevron-down"></i>
+              </a>
+        </div>
       </section>
     </header>
 
-    <section class="bio" id="bio">
-      <div class="bio-inner">
-        <h2 class="bio-title fw-semibold">Bio</h2>
-        <p class="bio-text fw-medium">
+    <section class="about" id="about">
+      <div class="about-inner">
+        <h2 class="about-title fw-semibold">About Me</h2>
+        <p class="about-text fw-medium">
           Mathematician with a master's degree from Universitas Gadjah Mada (GPA 3.98/4.00), specialising in actuarial science and stochastic modelling. 
           Currently working as a research assistant on the FINCAPES project (University of Waterloo collaboration), building actuarial catastrophe models to quantify flood-related financial losses in Pontianak under multiple climate change scenarios (RCP 2.6, 4.5, 8.5). 
           Prior thesis work developed a modified ruin probability framework to assess whether Indonesian insurance companies can meet OJK regulatory capital requirements after a payment default, producing more realistic estimates than the prior method at 5x the computational speed. 
           </p>
-        <p class="bio-text fw-medium">
+        <p class="about-text fw-medium">
           Research funded by LPDP (Indonesia's national education endowment) and a 90,000 NTD international research grant at National Dong Hwa University, Taiwan. 
           Nationally recognised in mathematics, having won a Gold Medal at ONMIPA 2018 and a bronze medal at the 25th International Mathematics Competition (IMC) in Bulgaria. 
           Enjoys solving competitive programming problems on 
@@ -117,6 +145,12 @@
         </p>
       </div>
     </section>
+
+    <section class="skills" id="skills">
+    </section>
+
+
+
   </main>
 
   <footer class="app-footer">
@@ -135,5 +169,6 @@
   <script src="js/navbar.js"></script>
   <script src="js/mobile_touch_controll.js"></script>
   <script src="js/transition_tracker.js"></script>
+  <script src="js/typing_effect.js"></script>
 </body>
 </html>

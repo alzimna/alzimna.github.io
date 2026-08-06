@@ -1,26 +1,35 @@
 /* Hero Section */
-
 header {
   width: 100vw;
 }
 
+/* Contain hero-text mobile, hero-image, and hero-content */
 .hero {
   min-height: 100vh;
-  padding: 130px 8% 70px;
+  padding: 130px 8% 50px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 60px;
+  gap: 50px;
 
   position: relative;
 }
 
+/*For profile */
 .hero-image-wrap {
   --hero-shape: 56% 44% 52% 48% / 42% 56% 44% 58%;
   position: relative;
-  width: min(380px, 35vw);
+  width: min(320px,35vw);
   aspect-ratio: 1 / 1;
+
+  @media (max-width: 760px){
+    width: 250px;
+  }
+}
+
+.hero-image-wrap.mobile{
+  display: none;
 }
 
 .hero-image {
@@ -37,44 +46,104 @@ header {
   display: block;
 }
 
+/*Hello Fellas and slight introduction text */
+.hero-text{
+  max-width: 95vw;
+  opacity: 0.5;
+  font-size: clamp(0.75rem, 1vw, 1.5rem);
+}
+
+.hero-text.web{
+  margin-bottom: -10px;
+}
+
+.hero-text.mobile{
+  display: none;
+}
+
+/*Contains hero-title, hero-subtitle, and hero-actions */
 .hero-content {
-  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap : 15px;
+  width: 500px;
 }
 
-.hero-title {
-  color: var(--text-primary);
-  margin-bottom: 30px;
-  line-height: 1.2;
-  font-size: clamp(1.7rem, 3.25vw, 2.75rem);
+/*Contains name and job*/
+.hero-title{
+  display: flex;
+  flex-direction: column;
+  gap : 5px;
 }
 
-.hero-title span {
-  color: var(--text-primary);
+span.name {
+  color:var(--color8);
+  font-size: clamp(2rem, 3.25vw, 2.5rem);
 }
 
+.typewriter-effect {
+  display: flex;
+
+  @media (max-width: 760px){
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.typewriter-effect > .text {
+  max-width: 0;
+  color:var(--text-primary);
+  font-size: clamp(1.5rem, 1.75vw, 2rem);
+  animation: typing 3s steps(var(--characters)) infinite;
+  white-space: nowrap;
+  overflow: hidden;
+
+  @media (max-width: 760px){
+    font-size: clamp(1rem, 1.5vw, 1.75rem);
+  }
+}
+
+.typewriter-effect::after {
+  content: " |";
+  display: inline-block;
+
+  max-height: 0.75em;
+  line-height: 0.5em;
+  animation: blink 1s infinite;
+  animation-timing-function: step-end;
+}
+
+@keyframes typing {
+  75%,
+  100% {
+    max-width: calc(var(--characters) * 1ch);
+  }
+}
+@keyframes blink {
+  0%,
+  75%,
+  100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+}
+
+/*Education*/
 .hero-subtitle {
   line-height: 1.3;
-  margin-bottom: 10px;
   color: var(--text-primary);
   font-size: clamp(1.05rem, 2.3vw, 1.25rem);
 }
 
-.hero-email {
-  display: inline-block;
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-size: clamp(0.95rem, 1.8vw, 1rem);
-  margin-top: -12px;
-  margin-bottom: 28px;
-}
-
-.hero-email:hover {
-  text-decoration: underline;
-}
-
+/*Wrapper for button*/
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
+
+  margin-top: 5px;
   gap:10px;
 }
 
@@ -101,11 +170,43 @@ header {
   color: var(--btn-text-secondary);
 }
 
+.hero-scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+
+    transform: translateX(-50%);
+}
+
+.scroll-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: clamp(0.75rem, 1vw, 1.5rem);
+
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(4px);
+    }
+    60% {
+        transform: translateY(2px);
+    }
+}
 
 /* =========================
-    Bio Section
+    about Section
 ========================= */
-.bio {
+.about {
   width:100%;
   min-height: 100vh;
 
@@ -115,19 +216,19 @@ header {
   border-bottom: 1px solid var(--section-muted-border);
 }
 
-.bio-inner {
+.about-inner {
   margin: 0 auto;
   display: grid;
   gap: 20px;
 }
 
-.bio-title {
+.about-title {
   color: var(--text-primary);
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   line-height: 1.2;
 }
 
-.bio-text {
+.about-text {
   color: var(--text-primary);
   font-size: clamp(0.75rem, 1.6vw, 1.12rem);
   line-height: 1.85;
@@ -137,7 +238,6 @@ header {
 
 @media (max-width: 980px) {
   .hero {
-    gap: 40px;
     padding-top: 120px;
   }
 }
@@ -149,18 +249,34 @@ header {
     gap: 25px;
     padding-inline: 6%;
   }
+
   .hero-image-wrap {
-    width: min(380px, 70vw);
+    width: 230px;
   }
+
+  .hero-image-wrap.mobile,
+  .hero-text.mobile {
+    display: block;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+  
+  .hero-image-wrap.web,
+  .hero-text.web {
+    display: none;
+  }
+
   .hero-actions {
     justify-content: center;
   }
-  .bio {
+  .about {
     padding-inline: 6%;
   }
 
-  .bio-title,
-  .bio-text {
+  .about-title,
+  .about-text {
     text-align: justify;
   }
 }

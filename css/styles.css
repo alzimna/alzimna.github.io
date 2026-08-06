@@ -6,7 +6,6 @@
 @import "../css/shadow.css";
 @import "../css/page_swap.css";
 @import "../css/font.css";
-@import "../css/index.css";
 
 :root{  
   --r-sm:2px; --r-base:4px; --r-md:6px; --r-lg:8px; --r-xl:12px; --r-pill:9999px;
