@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/about.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 
@@ -43,10 +44,10 @@
   <header class="center-container">
     <nav class="parent-nav">
       <ul class="nav fw-medium">
-        <li><a href="./index.html" onclick="noneDirection()">Home</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="./projects.html" onclick="rightDirection()">Projects</a></li>
         <li><a href="./articles.html" onclick="rightDirection()">Articles</a></li>
-        <li><a href="./about.html" onclick="rightDirection()">About</a></li>
         <div class="animation"></div>
       </ul>
     </nav>
@@ -76,17 +77,18 @@
   </header>
 
   <main class="main-slide-show">
+    <!-- THIS IS WHERE HERO SECTION STARTS-->
     <header>
         <section>
           <div class="hero" id="home">
-            <span class="hero-text mobile">Hello fellas!</span>
+            <span class="hero-text mobile">Hello, fellas!</span>
 
             <div class="hero-image-wrap mobile">
               <img class="hero-image" src="/image/profile.png" alt="Portrait of Alzimna Badril Umam">
             </div>
 
             <div class="hero-content">
-              <span class="hero-text web">Hello fellas!</span>
+              <span class="hero-text web">Hello, fellas!</span>
               <h1 class="hero-title fw-bold">
                   <span class = "name">Alzimna Badril Umam</span>
                   <div class="typewriter-effect">
@@ -118,31 +120,59 @@
         </div>
 
         <div class="hero-scroll">
-              <a href="#about" class="scroll-btn">
+              <a href="#about" onclick="downDirection()" class="scroll-btn">
                 Scroll Down For More
                 <i class="fa-solid fa-chevron-down"></i>
               </a>
         </div>
-      </section>
+        </section>
     </header>
 
+    <!-- THIS IS WHERE ABOUT SECTION STARTS-->
     <section class="about" id="about">
-      <div class="about-inner">
-        <h2 class="about-title fw-semibold">About Me</h2>
-        <p class="about-text fw-medium">
-          Mathematician with a master's degree from Universitas Gadjah Mada (GPA 3.98/4.00), specialising in actuarial science and stochastic modelling. 
-          Currently working as a research assistant on the FINCAPES project (University of Waterloo collaboration), building actuarial catastrophe models to quantify flood-related financial losses in Pontianak under multiple climate change scenarios (RCP 2.6, 4.5, 8.5). 
-          Prior thesis work developed a modified ruin probability framework to assess whether Indonesian insurance companies can meet OJK regulatory capital requirements after a payment default, producing more realistic estimates than the prior method at 5x the computational speed. 
-          </p>
-        <p class="about-text fw-medium">
-          Research funded by LPDP (Indonesia's national education endowment) and a 90,000 NTD international research grant at National Dong Hwa University, Taiwan. 
-          Nationally recognised in mathematics, having won a Gold Medal at ONMIPA 2018 and a bronze medal at the 25th International Mathematics Competition (IMC) in Bulgaria. 
-          Enjoys solving competitive programming problems on 
-          <a href="https://codeforces.com/profile/alzimdoang" target="_blank" title="Codeforces Link" style="text-decoration: none; color:#FC563C">Codeforces</a>
-          and HackerRank. 
-          Further work and projects are available at 
-          <a href="https://alzimna.github.io/" target="_blank" title="Github Pages Link" style="text-decoration: none; color:#FC563C">My Github Pages</a>
-        </p>
+      <div class="about-title">
+        <h1 class="about-title-text">About Me</h1>
+        <h2 class="about-title-text">About Me</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-content-grid">
+          <div class="about-image" style="opacity: 1; transform: none;">
+            <div class="about-image-blob">
+              <img alt="Profile Image On About Section" 
+                  fetchpriority="high" 
+                  width="700" height="1000" 
+                  decoding="async" 
+                  data-nimg="1" 
+                  style="color:transparent;object-fit:cover;height:100%;border-radius:1rem" 
+                  src="/image/profile_about.jpg">
+            </div>
+          </div>
+          <div class="about-other-wrapper" style="opacity: 1; transform: none;">
+            <div class="about-text">
+                <h2 class="about-text-name">
+                  Hello, I'm 
+                  <span style="color:var(--color8)">Alzimna Badril Umam</span>
+                </h2>
+
+                <h3 class="about-text-job">
+                  <span style="color:var(--color8)">Mathematician</span> 
+                  with a master's degree from <span style="color:var(--color8)">Universitas Gadjah Mada (GPA 3.98/4.00)</span>,
+                  specialising in <span style="color:var(--color8)">stochastic modelling</span>.
+                </h3>
+                
+                <div class="about-text-desc-container">
+                  <p class="about-text-desc">
+                    Currently working as a research assistant on the FINCAPES project (University of Waterloo collaboration), building actuarial catastrophe models to quantify flood-related financial losses in Pontianak under multiple climate change scenarios (RCP 2.6, 4.5, 8.5).
+                    Research funded by LPDP (Indonesia's national education endowment) and a 90,000 NTD international research grant at National Dong Hwa University, Taiwan. 
+                    Nationally recognised in mathematics, having won a Gold Medal at ONMIPA 2018 and a bronze medal at the 25th International Mathematics Competition (IMC) in Bulgaria. 
+                    Enjoys solving competitive programming problems on 
+                    <a href="https://codeforces.com/profile/alzimdoang" target="_blank" title="Codeforces Link" style="text-decoration: none; color:#FC563C">Codeforces</a>
+                    and HackerRank.
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

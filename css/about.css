@@ -1,0 +1,210 @@
+/* =========================
+    about Section
+========================= */
+.about {
+  width:100vw;
+  min-height: 100vh;
+  padding-top: 7.5rem;
+  padding-bottom: 1rem;
+
+  line-height: 1.5;
+
+  background: var(--color2);
+  border-top: 1px solid var(--section-muted-border);
+  border-bottom: 1px solid var(--section-muted-border);
+}
+
+.about-title{
+  text-align: center;
+}
+
+h1.about-title-text {
+  background-image: linear-gradient(to top, transparent, var(--text-primary));
+  color: transparent;
+  background-clip: text;
+  opacity: 0.3;
+  z-index: 0;
+
+  margin-bottom: 1rem;
+  line-height: 1.33;
+  font-size: clamp(3rem, 4vw, 3.75rem);
+  font-weight: 800;
+}
+
+
+h2.about-title-text {
+  z-index: 1;
+  margin-bottom: 1rem;
+  line-height: 1.33;
+  font-weight: 700;
+  transform: translateY(-3.5rem);
+
+  color: var(--text-primary);
+  font-size: clamp(2.5rem, 3.25vw, 3rem);
+}
+
+.about-content {
+    width: 100%;
+    -webkit-margin-start: auto;
+    margin-inline-start: auto;
+    -webkit-margin-end: auto;
+    margin-inline-end: auto;
+    max-width: 1024px;
+    -webkit-padding-start: 2rem;
+    padding-inline-start: 2rem;
+    -webkit-padding-end: 2rem;
+    padding-inline-end: 2rem;
+}
+
+@media screen and (min-width: 650px) {
+    .about-content {
+        max-width: 75rem;
+    }
+}
+
+.about-content-grid {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: 1fr;
+    align-items: start;
+
+    @media screen and (min-width: 650px) {
+      gap: 10%;
+      grid-template-columns: 25% 65%;
+    }
+}
+
+.about-image {
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  align-self: start;
+
+  aspect-ratio: 7/10;
+
+  background-image: linear-gradient(45deg, 
+                                    transparent, 
+                                    var(--color8),
+                                    transparent);
+
+  border-radius: 1rem;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+
+  @media screen and (max-width: 650px) {
+        -webkit-margin-start: auto;
+        margin-inline-start: auto;
+        -webkit-margin-end: auto;
+        margin-inline-end: auto;
+        width: 200px;
+    }
+}
+
+.about-image-blob{
+  overflow: hidden;
+  border-radius: 1rem;
+
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+
+  height: 100%;
+  aspect-ratio: 7/10;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+
+  > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.about-image-blob:hover, .about-image-blob[data-hover] {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+}
+
+.about-other-wrapper{
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.about-text {
+  color: var(--text-primary);
+  font-size: clamp(0.75rem, 1.6vw, 1.12rem);
+  font-weight: 500;
+  line-height: 1.85;
+
+  text-align: start;
+  margin-top: 0px;
+
+  @media screen and (max-width: 650px){
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+}
+
+h2.about-text-name{
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: clamp(2rem, 3.25vw, 2.5rem);
+}
+
+h3.about-text-job{
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 1.75vw, 2rem);
+
+  @media screen and (max-width: 650px){
+    font-size: clamp(1.05rem, 2.3vw, 1.25rem);
+  }
+}
+
+.about-text-desc-container{
+  border-color: black;
+  border-bottom: 2px solid;
+  padding-bottom: 2rem;
+
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  -webkit-padding-start: 0px;
+  padding-inline-start: 0px;
+  -webkit-padding-end: 0px;
+  padding-inline-end: 0px;
+  text-align: justify;
+
+  @media screen and (max-width: 650px){
+      border-color: transparent;
+      -webkit-margin-start: auto;
+      margin-inline-start: auto;
+      -webkit-margin-end: auto;
+      margin-inline-end: auto;
+      -webkit-padding-start: 1rem;
+      padding-inline-start: 1rem;
+      -webkit-padding-end: 1rem;
+      padding-inline-end: 1rem;
+  }
+}
+
+p.about-text-desc{
+  color: var(--text-primary);
+  font-weight: 1.125rem;
+  
+
+  @media screen and (max-width: 650px){
+    font-size: 1rem;
+  }
+}

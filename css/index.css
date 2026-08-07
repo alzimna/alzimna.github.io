@@ -203,39 +203,6 @@ span.name {
     }
 }
 
-/* =========================
-    about Section
-========================= */
-.about {
-  width:100%;
-  min-height: 100vh;
-
-  padding: 130px 8% 70px;
-  background: var(--color2);
-  border-top: 1px solid var(--section-muted-border);
-  border-bottom: 1px solid var(--section-muted-border);
-}
-
-.about-inner {
-  margin: 0 auto;
-  display: grid;
-  gap: 20px;
-}
-
-.about-title {
-  color: var(--text-primary);
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  line-height: 1.2;
-}
-
-.about-text {
-  color: var(--text-primary);
-  font-size: clamp(0.75rem, 1.6vw, 1.12rem);
-  line-height: 1.85;
-  text-align: justify;
-}
-
-
 @media (max-width: 980px) {
   .hero {
     padding-top: 120px;
@@ -270,13 +237,5 @@ span.name {
 
   .hero-actions {
     justify-content: center;
-  }
-  .about {
-    padding-inline: 6%;
-  }
-
-  .about-title,
-  .about-text {
-    text-align: justify;
   }
 }

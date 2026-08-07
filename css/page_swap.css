@@ -37,6 +37,22 @@
   animation-name: slide-in-right;
 }
 
+[data-direction="down"]::view-transition-old(main-page-content) {
+  animation-name: slide-out-up;
+}
+
+[data-direction="down"]::view-transition-new(main-page-content) {
+  animation-name: slide-in-down;
+}
+
+[data-direction="up"]::view-transition-old(main-page-content) {
+  animation-name: slide-out-down;
+}
+
+[data-direction="up"]::view-transition-new(main-page-content) {
+  animation-name: slide-in-up;
+}
+
 @media (prefers-reduced-motion: no-preference){
   @keyframes slide-in-left {
     from { transform: translateX(100vw); }

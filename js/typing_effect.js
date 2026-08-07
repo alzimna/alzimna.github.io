@@ -2,10 +2,11 @@ const typeWriter = document.getElementById('typewriter-text');
 const texts = ['Actuarial Research Assistant',
                 'Quantitative Risk Researcher',
                 'Programming Enthusiast'];
-let i=0;
+let i = 0;
 const listener = e => {
     i = i < texts.length - 1 ? i + 1 : 0;
     typeWriter.innerHTML = texts[i];
+    typeWriter.style.setProperty('--characters', texts[i].length);
 };
 
 typeWriter.innerHTML = texts[0];

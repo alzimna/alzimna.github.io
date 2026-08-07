@@ -49,16 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function updateActiveWeightClass() {
-        navAnchors = navList.querySelectorAll("li a");
-        navAnchors.forEach((anchor) => anchor.classList.remove('fw-semibold'));
-        if (!activeLink) return;
-        const activeAnchor = activeLink.querySelector('a');
-        if (activeAnchor) {
-            activeAnchor.classList.add('fw-semibold');
-        }
-    }
-
     function closeMobileMenu() {
         navElement.classList.remove('mobile-open');
         mobileToggle.setAttribute('aria-expanded', 'false');
@@ -68,13 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!animationDiv || isMobile()) return;
         animationDiv.style.width = target.offsetWidth + 4 + 'px';
         animationDiv.style.left = target.offsetLeft - 2 + 'px';
-    }
-
-    function resetActiveState() {
-        navLinks = navList.querySelectorAll('li');
-        navAnchors = navList.querySelectorAll("li a");
-        navLinks.forEach((link) => link.classList.remove('active', 'hover'));
-        navAnchors.forEach((anchor) => anchor.classList.remove('fw-semibold'));
     }
 
     function updateToggleLabel() {
@@ -94,11 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const currentPath = normalizePath(window.location.pathname);
+    const currentHash = window.location.hash;
 
     navAnchors = navList.querySelectorAll('li a');
     navAnchors.forEach((anchor) => {
         const anchorPath = normalizePath(anchor.pathname);
-        if (anchorPath === currentPath) {
+        if (anchorPath === currentPath && anchor.hash === currentHash) {
             activeLink = anchor.parentElement;
             activeLink.classList.add('active');
         }
@@ -107,6 +91,23 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!activeLink) {
         activeLink = navLinks[0];
         activeLink.classList.add('active');
+    }
+
+    function resetActiveState() {
+        navLinks = navList.querySelectorAll('li');
+        navAnchors = navList.querySelectorAll("li a");
+        navLinks.forEach((link) => link.classList.remove('active', 'hover'));
+        navAnchors.forEach((anchor) => anchor.classList.remove('fw-semibold'));
+    }
+
+    function updateActiveWeightClass() {
+        navAnchors = navList.querySelectorAll("li a");
+        navAnchors.forEach((anchor) => anchor.classList.remove('fw-semibold'));
+        if (!activeLink) return;
+        const activeAnchor = activeLink.querySelector('a');
+        if (activeAnchor) {
+            activeAnchor.classList.add('fw-semibold');
+        }
     }
 
     updateGithub();
