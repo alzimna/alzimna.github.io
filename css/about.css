@@ -1,10 +1,14 @@
 /* =========================
     about Section
 ========================= */
+:root{
+  --photo-ratio : 7/10;
+}
+
 .about {
   width:100vw;
   min-height: 100vh;
-  padding-top: 7.5rem;
+  padding-top: 5.5rem;
   padding-bottom: 1rem;
 
   line-height: 1.5;
@@ -54,11 +58,9 @@ h2.about-title-text {
     padding-inline-start: 2rem;
     -webkit-padding-end: 2rem;
     padding-inline-end: 2rem;
-}
 
-@media screen and (min-width: 650px) {
-    .about-content {
-        max-width: 75rem;
+    @media screen and (min-width: 650px) {
+            max-width: 75rem;
     }
 }
 
@@ -81,8 +83,7 @@ h2.about-title-text {
   width: 100%;
   align-self: start;
 
-  aspect-ratio: 7/10;
-
+  aspect-ratio: var(--photo-ratio);
   background-image: linear-gradient(45deg, 
                                     transparent, 
                                     var(--color8),
@@ -113,7 +114,7 @@ h2.about-title-text {
   transform: rotate(10deg);
 
   height: 100%;
-  aspect-ratio: 7/10;
+  aspect-ratio: var(--photo-ratio);
   -webkit-transition: all 300ms;
   transition: all 300ms;
 
@@ -142,8 +143,6 @@ h2.about-title-text {
 
 .about-text {
   color: var(--text-primary);
-  font-size: clamp(0.75rem, 1.6vw, 1.12rem);
-  font-weight: 500;
   line-height: 1.85;
 
   text-align: start;
@@ -158,17 +157,13 @@ h2.about-title-text {
 h2.about-text-name{
   margin-bottom: 0.75rem;
   font-weight: 600;
-  font-size: clamp(2rem, 3.25vw, 2.5rem);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
 }
 
 h3.about-text-job{
   margin-bottom: 2rem;
   font-weight: 600;
-  font-size: clamp(1.5rem, 1.75vw, 2rem);
-
-  @media screen and (max-width: 650px){
-    font-size: clamp(1.05rem, 2.3vw, 1.25rem);
-  }
+  font-size: clamp(1.05rem, 2.3vw, 1.25rem);
 }
 
 .about-text-desc-container{
@@ -201,10 +196,79 @@ h3.about-text-job{
 
 p.about-text-desc{
   color: var(--text-primary);
-  font-weight: 1.125rem;
+  font-weight: 500;
+  font-size: clamp(0.75rem, 1.6vw, 1rem);
+}
+
+.about-boxes{
+  display: grid;
+  grid-row-gap: 0px;
+  grid-column-gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: start;
+  align-items: stretch;
+  margin-top: 1.5rem;
   
 
   @media screen and (max-width: 650px){
-    font-size: 1rem;
+      grid-row-gap: 1rem;
+      grid-column-gap: 0px;
+      grid-template-columns: 1fr;
+      place-items: center;
+    }
+}
+
+.about-box-container{
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  min-width: 0px;
+  word-wrap: break-word;
+  
+  /* box-shadow: var(--chakra-shadows-lg); */
+  color: var(--text-primary);
+  border: 3px solid transparent;
+  border-bottom-color: var(--color8);
+  border-radius: 0.75rem;
+  background-color: var(--color2);
+
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+
+  @media screen and (max-width: 650px){
+    width: 17.5rem;
   }
 }
+
+.about-box-container:hover, .about-box-container[data-hover] {
+    /* box-shadow: var(--chakra-shadows-xl); */
+    border-color: var(--color8);
+}
+
+.about-box-body{
+  padding: 1.25rem;
+  flex: 1 1 0%;
+  align-content: center;
+}
+
+.about-item{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 0.75rem;
+}
+
+h2.about-item-highlight{
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--color8);
+  @media screen and (max-width: 650px){
+    line-height: 1.33;
+  }
+
+}
+

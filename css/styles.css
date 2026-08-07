@@ -52,17 +52,6 @@ body > footer {
     position:relative;
 }
 
-.screen{ display:none;}
-.screen.active{ 
-    display:block;
-    animation-name : slide-in-left;
-    animation-duration: 800ms;
-    animation-timing-function : ease; 
-    max-width: 1100px;
-    width:100%;
-    margin-left: auto; margin-right: auto;
-  }
-
 .main-slide-show{
   flex-grow:1;
   display:flex;
@@ -77,120 +66,6 @@ body > footer {
       padding-left:0;
       padding-right:0;}
 }
-
-/* ---------------- problem filter screen---------------- */
-.page-content-problem-screen{
-  max-width:1100px;
-  margin:0 auto;
-  padding:0 var(--margin-mobile);
-}
-
-@media (min-width:720px){
-  .page-content-problem-screen{ padding:var(--xl) var(--margin-desktop); }
-}
-
-.page-content{
-  width: 100%;          /* w-full */
-  max-width: 48rem;     /* max-w-3xl = 768px */
-  margin:0 auto;
-  padding:0 var(--margin-mobile);
-}
-
-@media (min-width:720px){
-  .page-content{ padding:var(--xl) var(--margin-desktop); }
-}
-
-.eyebrow{
-  font-family:var(--font-primary);
-  font-size:12px;
-  font-weight:500;
-  letter-spacing:0.02em;
-  text-transform:uppercase;
-  color:var(--card-text-secondary);
-  margin:var(--xs) 0 var(--xs) 0;
-}
-
-/* Untuk Test your Luck */
-h1.brand,h2.brand{
-  font-weight:800;
-  letter-spacing:-0.02em;
-  font-size:48px;
-  line-height:1.1;
-  color:var(--text-primary);
-  text-align:center;
-  margin:0 0 var(--lg) 0;
-}
-
-h1.screen-header{
-    min-height: 0px;
-    margin-top: 20px;
-    margin-bottom: 1rem;
-    padding-top: var(--nav-height);
-}
-
-p.brand {
-    color: var(--text-primary); /* text-muted-foreground */
-    text-align: center;
-    margin-bottom: 2.5rem;            /* mb-10 = 40px */
-    max-width: 32rem;                 /* max-w-lg = 512px */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-/* ---------- shared card ---------- */
-.card{
-  background:var(--paper-bg);
-  border:1px solid var(--footer-border);
-  border-radius:var(--lg);
-  padding:var(--lg);
-  color : var(--card-text-color);
-}
-
-/* ---------- filter chips ---------- */
-.filter-group{ margin-bottom:var(--lg); }
-.filter-label{
-  font-size:14px;
-  font-weight:600; 
-  letter-spacing:0.05em; 
-  margin:0 0 var(--sm) 0;
-}
-.chip-row{ display:flex; 
-          flex-wrap:wrap; 
-          gap:var(--xs); }
-
-.chip{
-  font-family:var(--font-primary);
-  font-size:14px;
-  font-weight:600;
-  padding:var(--sm) var(--md);
-  border-radius:var(--r-pill);
-  border:1px solid var(--card-border);
-  background:transparent;
-  cursor:pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.25s ease, border-color 0.25s ease;
-}
-
-.chip:hover{ transform: translateY(-2px) scale(1.03);}
-.chip:active {
-  transform: translateY(0) scale(0.98);
-}
-
-.chip.selected{
-  background : var(--card-bg-selected);
-  border-color : var(--card-border-selected);
-  color : var(--card-text-color-selected);
-  font-weight:600;
-}
-
-.pool-count{
-  font-size:12px;
-  margin-top:var(--lg);
-}
-.pool-count strong{font-weight:600; }
 
 
 /* Untuk Footer */
