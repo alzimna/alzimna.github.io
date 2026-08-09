@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/project.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 
@@ -203,11 +204,106 @@
       </div>
     </section>
 
-    <section class="skills" id="skills">
+    <section class="project" id="project">
+      <div class="project-title">
+        <h1 class="project-title-text">Project</h1>
+        <h2 class="project-title-text">Project</h2>
+      </div>
+      <div class="project-content-container">
+        <div class="project-heading-container" style="opacity: 1; transform: none;">
+            <h3 class="project-heading fw-bold">Project I've Built</h3>
+            <p class="project-heading">
+            I've built projects to automate repetitive tasks, helping me learn new things faster and more efficiently. 
+            Moreover, I've learned basic web development to present my projects publicly in a clear and easy-to-understand way.
+            </p>
+        </div>
+
+        <div class="project-cards-container" style="opacity: 1; transform: none;">
+            <!-- Project 1 -->
+            <div class="project-card-container dark-shadow" role="group">
+                <div class="project-card-body">
+                    <div class="project-card-image-container">
+                        <div class="project-card-image-blur"></div><img alt="Project Preview Thumbail"
+                            src="/image/project_1.PNG" class="project-card-image"
+                            style="object-fit: cover; height: 250px; width: 100%;">
+                    </div><a target="_blank" class="project-card-link fw-bold" href="https://alzimna.github.io">Personal Portfolio</a>
+                    <div class="project-card-techstack-container">
+                      <span class="project-card-techstack fw-bold">
+                            <img class="project-card-techstack-img" alt="Tech Stack Logo" src="/assets/svg/html.svg">
+                            <p>HTML</p></span>
+                      <span class="project-card-techstack fw-bold">
+                            <img class="project-card-techstack-img" alt="Tech Stack Logo" src="/assets/svg/css.svg">
+                            <p>CSS</p></span>
+                      <span class="project-card-techstack fw-bold">
+                            <img class="project-card-techstack-img" alt="Tech Stack Logo" src="/assets/svg/javascript.svg">
+                            <p>JavaScript</p></span>
+                    </div>
+                    <p class="project-card-desc">
+                    I've built my personal web-based portfolio using HTML, CSS, and JavaScript, with GitHub Pages as the deployment platform. 
+                    It presents my resume as a scrollable page, showcases the GitHub repositories of my projects, and provides links to live demos when available. 
+                    Everything is open to use, and you can clone the projects if you're familiar with GitHub. 
+                    Many of my projects are built to solve my own problems, while also helping others who may have similar needs.
+                    </p>
+                </div>
+                <div class="project-card-footer">
+                    <div role="group" class="project-card-button-container" data-orientation="horizontal">
+                      <button class="project-card-button-detail fw-medium" type="button">Details<span
+                                  class="project-card-button-icon fa-solid fa-circle-arrow-right"></span></button>
+                      <a target="_blank" href="https://alzimna.github.io" class="project-card-button-preview fw-medium" type="button">Preview<span
+                                  class="project-card-button-icon fa-solid fa-eye"></span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card-container dark-shadow" role="group">
+                <div class="project-card-body">
+                    <div class="project-card-image-container">
+                        <div class="project-card-image-blur"></div><img alt="Project Preview Thumbail"
+                            src="/image/project_2.PNG" class="project-card-image"
+                            style="object-fit: cover; height: 250px; width: 100%;">
+                    </div><a target="_blank" class="project-card-link fw-bold" href="https://alzimna.github.io/Math-Gacha/">Math Gacha</a>
+                    <div class="project-card-techstack-container">
+                      <span class="project-card-techstack fw-bold">
+                            <img class="project-card-techstack-img" alt="Tech Stack Logo" src="/assets/svg/python.svg">
+                            <p>Python</p></span>
+                      <span class="project-card-techstack fw-bold">
+                            <img class="project-card-techstack-img" alt="Tech Stack Logo" src="/assets/svg/latex.svg">
+                            <p>Latex</p></span>
+                      <span class="project-card-techstack fw-bold">
+                            <img class="project-card-techstack-img" alt="Tech Stack Logo" src="/assets/svg/html.svg">
+                            <p>HTML</p></span>
+                      <span class="project-card-techstack fw-bold">
+                            <img class="project-card-techstack-img" alt="Tech Stack Logo" src="/assets/svg/css.svg">
+                            <p>CSS</p></span>
+                      <span class="project-card-techstack fw-bold">
+                            <img class="project-card-techstack-img" alt="Tech Stack Logo" src="/assets/svg/javascript.svg">
+                            <p>JavaScript</p></span>
+                    </div>
+                    <p class="project-card-desc">
+                    I've built this project using Python, LaTeX, HTML, CSS, and JavaScript to make practicing competition problems more random and interactive. 
+                    It converts your LaTeX problem files into CSV or JSON, which can then be loaded into the web app as a problem database. 
+                    The app turns the database into a spinning gacha machine, so you can randomly pick problems instead of solving them in the original contest order. 
+                    You can use it for individual practice or challenge a friend to see who can solve the selected problem first. 
+                    The project is open to use, and you can clone it if you're familiar with GitHub.
+                    </p>
+                </div>
+                <div class="project-card-footer">
+                    <div role="group" class="project-card-button-container" data-orientation="horizontal">
+                      <button class="project-card-button-detail fw-medium" type="button">Details<span
+                                  class="project-card-button-icon fa-solid fa-circle-arrow-right"></span></button>
+                      <a target="_blank" class="project-card-button-preview fw-medium" type="button" href="https://alzimna.github.io/Math-Gacha/">Preview<span
+                                  class="project-card-button-icon fa-solid fa-eye"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-view-all-container" style="opacity: 1; transform: none;">
+          <a class="project-view-all fw-medium" href="/projects.html">View All projects<span
+                                  class="project-card-button-icon fa-solid fa-circle-arrow-right"></span>
+          </a>
+        </div>
+    </div>
     </section>
-
-
-
   </main>
 
   <footer class="app-footer">

@@ -5,6 +5,7 @@ header {
 
 /* Contain hero-text mobile, hero-image, and hero-content */
 .hero {
+  min-height: 100dvh;
   min-height: 100vh;
   padding: 130px 8% 50px;
 
@@ -50,7 +51,7 @@ header {
 .hero-text{
   max-width: 95vw;
   opacity: 0.5;
-  font-size: clamp(0.75rem, 1vw, 1.5rem);
+  font-size: clamp(0.75rem, 0.5vw, 1.5rem);
 }
 
 .hero-text.web{
