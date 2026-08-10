@@ -1,39 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A glimpse of Alzimna Badril Umam"/>
-  <meta name="author" content="Alzimna Badril Umam"/>
-  <meta name="keywords" content="Portfolio, Alzimna Badril Umam Projects, Mathematics, Math, Practice, Competition, OSN, OSK, OSP, Kabupaten, Math Gacha"/>
-  <meta property="og:title" content="Alzimna Badril Umam | Quantitative Risk Researcher | Actuarial Modelling | Programming Enthusiast">
-  <meta property="og:description" content="Portfolio of Alzimna Badril Umam">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Projects built by Alzimna Badril Umam" />
+  <meta name="author" content="Alzimna Badril Umam" />
+  <meta name="keywords"
+    content="Portfolio, Alzimna Badril Umam Projects, Mathematics, Math, Practice, Competition, OSN, OSK, OSP, Kabupaten, Math Gacha" />
+  <meta property="og:title" content="Projects Built by Alzimna Badril Umam" />
+  <meta property="og:description"
+    content="This page features projects I've built throughout my learning journey with various tools and technologies" />
+  <meta property="og:type" content="website" />
 
-  <title>Alzimna Badril Umam | Quantitative Risk Researcher | Actuarial Modelling | Programming Enthusiast</title>
+  <title>Projects built by Alzimna Badril Umam</title>
 
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/project.css" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
 
   <!-- Tulis Latex di HTML -->
   <script>
     window.MathJax = {
-                      tex: {
-                        inlineMath: [['$', '$'], ['\\(', '\\)']]
-                      }
-                    };
+      tex: {
+        inlineMath: [
+          ["$", "$"],
+          ["\\(", "\\)"],
+        ],
+      },
+    };
   </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-P46W9GQNQK" data-no-inline></script>
   <script data-no-inline>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-P46W9GQNQK');
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-P46W9GQNQK");
   </script>
 </head>
 
@@ -41,10 +55,18 @@
   <header class="center-container">
     <nav class="parent-nav">
       <ul class="nav fw-medium">
-        <li><a href="./index.html" onclick="leftDirection()">Home</a></li>
-        <li><a href="./projects.html" onclick="noneDirection()">Projects</a></li>
-        <li><a href="./articles.html" onclick="rightDirection()">Articles</a></li>
-        <li><a href="./about.html" onclick="rightDirection()">About</a></li>
+        <li>
+          <a href="./index.html#home" onclick="leftDirection()">Home</a>
+        </li>
+        <li>
+          <a href="./index.html#about" onclick="leftDirection()">About</a>
+        </li>
+        <li>
+          <a href="./index.html#project" onclick="leftDirection()">Projects</a>
+        </li>
+        <li>
+          <a href="./index.html#article" onclick="leftDirection()">Articles</a>
+        </li>
         <div class="animation"></div>
       </ul>
     </nav>
@@ -52,31 +74,180 @@
     <nav class="parent-toggle">
       <button type="button" class="theme-toggle light-shadow">
         <span class="icon icon-sun" aria-hidden="true">
-          <svg width="35px" height="35px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z" fill="#0f172a"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C12.4142 1.25 12.75 1.58579 12.75 2V4C12.75 4.41421 12.4142 4.75 12 4.75C11.5858 4.75 11.25 4.41421 11.25 4V2C11.25 1.58579 11.5858 1.25 12 1.25ZM3.66865 3.71609C3.94815 3.41039 4.42255 3.38915 4.72825 3.66865L6.95026 5.70024C7.25596 5.97974 7.2772 6.45413 6.9977 6.75983C6.7182 7.06553 6.2438 7.08677 5.9381 6.80727L3.71609 4.77569C3.41039 4.49619 3.38915 4.02179 3.66865 3.71609ZM20.3314 3.71609C20.6109 4.02179 20.5896 4.49619 20.2839 4.77569L18.0619 6.80727C17.7562 7.08677 17.2818 7.06553 17.0023 6.75983C16.7228 6.45413 16.744 5.97974 17.0497 5.70024L19.2718 3.66865C19.5775 3.38915 20.0518 3.41039 20.3314 3.71609ZM1.25 12C1.25 11.5858 1.58579 11.25 2 11.25H4C4.41421 11.25 4.75 11.5858 4.75 12C4.75 12.4142 4.41421 12.75 4 12.75H2C1.58579 12.75 1.25 12.4142 1.25 12ZM19.25 12C19.25 11.5858 19.5858 11.25 20 11.25H22C22.4142 11.25 22.75 11.5858 22.75 12C22.75 12.4142 22.4142 12.75 22 12.75H20C19.5858 12.75 19.25 12.4142 19.25 12ZM17.0255 17.0252C17.3184 16.7323 17.7933 16.7323 18.0862 17.0252L20.3082 19.2475C20.6011 19.5404 20.601 20.0153 20.3081 20.3082C20.0152 20.6011 19.5403 20.601 19.2475 20.3081L17.0255 18.0858C16.7326 17.7929 16.7326 17.3181 17.0255 17.0252ZM6.97467 17.0253C7.26756 17.3182 7.26756 17.7931 6.97467 18.086L4.75244 20.3082C4.45955 20.6011 3.98468 20.6011 3.69178 20.3082C3.39889 20.0153 3.39889 19.5404 3.69178 19.2476L5.91401 17.0253C6.2069 16.7324 6.68177 16.7324 6.97467 17.0253ZM12 19.25C12.4142 19.25 12.75 19.5858 12.75 20V22C12.75 22.4142 12.4142 22.75 12 22.75C11.5858 22.75 11.25 22.4142 11.25 22V20C11.25 19.5858 11.5858 19.25 12 19.25Z" fill="#0f172a"></path> </g></svg>
+          <svg width="35px" height="35px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z"
+                fill="#0f172a"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 1.25C12.4142 1.25 12.75 1.58579 12.75 2V4C12.75 4.41421 12.4142 4.75 12 4.75C11.5858 4.75 11.25 4.41421 11.25 4V2C11.25 1.58579 11.5858 1.25 12 1.25ZM3.66865 3.71609C3.94815 3.41039 4.42255 3.38915 4.72825 3.66865L6.95026 5.70024C7.25596 5.97974 7.2772 6.45413 6.9977 6.75983C6.7182 7.06553 6.2438 7.08677 5.9381 6.80727L3.71609 4.77569C3.41039 4.49619 3.38915 4.02179 3.66865 3.71609ZM20.3314 3.71609C20.6109 4.02179 20.5896 4.49619 20.2839 4.77569L18.0619 6.80727C17.7562 7.08677 17.2818 7.06553 17.0023 6.75983C16.7228 6.45413 16.744 5.97974 17.0497 5.70024L19.2718 3.66865C19.5775 3.38915 20.0518 3.41039 20.3314 3.71609ZM1.25 12C1.25 11.5858 1.58579 11.25 2 11.25H4C4.41421 11.25 4.75 11.5858 4.75 12C4.75 12.4142 4.41421 12.75 4 12.75H2C1.58579 12.75 1.25 12.4142 1.25 12ZM19.25 12C19.25 11.5858 19.5858 11.25 20 11.25H22C22.4142 11.25 22.75 11.5858 22.75 12C22.75 12.4142 22.4142 12.75 22 12.75H20C19.5858 12.75 19.25 12.4142 19.25 12ZM17.0255 17.0252C17.3184 16.7323 17.7933 16.7323 18.0862 17.0252L20.3082 19.2475C20.6011 19.5404 20.601 20.0153 20.3081 20.3082C20.0152 20.6011 19.5403 20.601 19.2475 20.3081L17.0255 18.0858C16.7326 17.7929 16.7326 17.3181 17.0255 17.0252ZM6.97467 17.0253C7.26756 17.3182 7.26756 17.7931 6.97467 18.086L4.75244 20.3082C4.45955 20.6011 3.98468 20.6011 3.69178 20.3082C3.39889 20.0153 3.39889 19.5404 3.69178 19.2476L5.91401 17.0253C6.2069 16.7324 6.68177 16.7324 6.97467 17.0253ZM12 19.25C12.4142 19.25 12.75 19.5858 12.75 20V22C12.75 22.4142 12.4142 22.75 12 22.75C11.5858 22.75 11.25 22.4142 11.25 22V20C11.25 19.5858 11.5858 19.25 12 19.25Z"
+                fill="#0f172a"></path>
+            </g>
+          </svg>
         </span>
         <span class="icon icon-moon" aria-hidden="true">
-          <svg width="35px" height="35px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 22C17.5228 22 22 17.5228 22 12C22 11.5373 21.3065 11.4608 21.0672 11.8568C19.9289 13.7406 17.8615 15 15.5 15C11.9101 15 9 12.0899 9 8.5C9 6.13845 10.2594 4.07105 12.1432 2.93276C12.5392 2.69347 12.4627 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#ffffff"></path> </g></svg>
+          <svg width="35px" height="35px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+            stroke="#ffffff">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 11.5373 21.3065 11.4608 21.0672 11.8568C19.9289 13.7406 17.8615 15 15.5 15C11.9101 15 9 12.0899 9 8.5C9 6.13845 10.2594 4.07105 12.1432 2.93276C12.5392 2.69347 12.4627 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                fill="#ffffff"></path>
+            </g>
+          </svg>
         </span>
         <span class="sr-only">Toggle theme</span>
       </button>
-      
 
-      <a class="github light-shadow"
-        href="https://alzimna.github.io/" 
-        target="_blank" 
-        rel="noopener noreferrer" 
+      <a class="github light-shadow" href="https://alzimna.github.io/" target="_blank" rel="noopener noreferrer"
         aria-label="Visit this project's Github">
         <svg xmlns="http://www.w3.org" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          <path
+            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
         </svg>
       </a>
     </nav>
   </header>
 
   <main class="main-slide-show">
-    <header>
-      Hello world !!
-    </header>
+    <section class="project" id="project">
+      <div class="project-title">
+        <h1 class="project-title-text">Project</h1>
+        <h2 class="project-title-text">Project</h2>
+      </div>
+      <div class="project-content-container">
+        <div class="project-heading-container" style="opacity: 1; transform: none">
+          <h3 class="project-heading fw-bold">Project I've Built</h3>
+          <p class="project-heading">
+            I've built projects to automate repetitive tasks, helping me learn
+            new things faster and more efficiently. Moreover, I've learned
+            basic web development to present my projects publicly in a clear
+            and easy-to-understand way.
+          </p>
+        </div>
+
+        <div class="project-cards-container" style="opacity: 1; transform: none">
+          <!-- Project 1 -->
+          <div class="project-card-container dark-shadow" role="group">
+            <div class="project-card-body">
+              <div class="project-card-image-container">
+                <div class="project-card-image-blur">
+                  <div class="project-card-blur-repo">
+                    <a target="_blank" class="project-card-blur-link"
+                      href="https://github.com/alzimna/alzimna.github.io" aria-label="Github Button"><i
+                        class="fa-brands fa-github" stroke="currentColor" fill="currentColor" stroke-width="0"
+                        viewBox="0 0 496 512" font-size="1.5rem" height="1em" width="1em"></i></a>
+                  </div>
+                </div>
+                <img alt="Project Preview Thumbail" src="/image/project_1.PNG" class="project-card-image"
+                  style="object-fit: cover; height: 250px; width: 100%" />
+              </div>
+              <a target="_blank" class="project-card-link fw-bold" href="https://alzimna.github.io">Personal
+                Portfolio</a>
+              <div class="project-card-techstack-container">
+                <span class="project-card-techstack fw-bold">
+                  <img class="project-card-techstack-img" alt="Tech Stack Logo" src="/assets/svg/html.svg" />
+                  <p>HTML</p>
+                </span>
+                <span class="project-card-techstack fw-bold">
+                  <img class="project-card-techstack-img" alt="Tech Stack Logo" src="/assets/svg/css.svg" />
+                  <p>CSS</p>
+                </span>
+                <span class="project-card-techstack fw-bold">
+                  <img class="project-card-techstack-img" alt="Tech Stack Logo" src="/assets/svg/javascript.svg" />
+                  <p>JavaScript</p>
+                </span>
+              </div>
+              <p class="project-card-desc">
+                I've built my personal web-based portfolio using HTML, CSS,
+                and JavaScript, with GitHub Pages as the deployment platform.
+                It presents my resume as a scrollable page, showcases the
+                GitHub repositories of my projects, and provides links to live
+                demos when available. Everything is open to use, and you can
+                clone the projects if you're familiar with GitHub. Many of my
+                projects are built to solve my own problems, while also
+                helping others who may have similar needs.
+              </p>
+            </div>
+            <div class="project-card-footer">
+              <div role="group" class="project-card-button-container" data-orientation="horizontal">
+                <button class="project-card-button-detail fw-medium" type="button">
+                  Details<span class="project-card-button-icon fa-solid fa-circle-arrow-right"></span>
+                </button>
+                <a target="_blank" href="https://alzimna.github.io" class="project-card-button-preview fw-medium"
+                  type="button">Preview<span class="project-card-button-icon fa-solid fa-eye"></span></a>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="project-card-container dark-shadow" role="group">
+            <div class="project-card-body">
+              <div class="project-card-image-container">
+                <div class="project-card-image-blur">
+                  <div class="project-card-blur-repo">
+                    <a target="_blank" class="project-card-blur-link" href="https://github.com/alzimna/Math-Gacha"
+                      aria-label="Github Button"><i class="fa-brands fa-github" stroke="currentColor"
+                        fill="currentColor" stroke-width="0" viewBox="0 0 496 512" font-size="1.5rem" height="1em"
+                        width="1em"></i></a>
+                  </div>
+                </div>
+                <img alt="Project Preview Thumbail" src="/image/project_2.PNG" class="project-card-image"
+                  style="object-fit: cover; height: 250px; width: 100%" />
+              </div>
+              <a target="_blank" class="project-card-link fw-bold" href="https://alzimna.github.io/Math-Gacha/">Math
+                Gacha</a>
+              <div class="project-card-techstack-container">
+                <span class="project-card-techstack fw-bold">
+                  <img class="project-card-techstack-img" alt="Tech Stack Logo" src="/assets/svg/python.svg" />
+                  <p>Python</p>
+                </span>
+                <span class="project-card-techstack fw-bold">
+                  <img class="project-card-techstack-img" alt="Tech Stack Logo" src="/assets/svg/latex.svg" />
+                  <p>Latex</p>
+                </span>
+                <span class="project-card-techstack fw-bold">
+                  <img class="project-card-techstack-img" alt="Tech Stack Logo" src="/assets/svg/html.svg" />
+                  <p>HTML</p>
+                </span>
+                <span class="project-card-techstack fw-bold">
+                  <img class="project-card-techstack-img" alt="Tech Stack Logo" src="/assets/svg/css.svg" />
+                  <p>CSS</p>
+                </span>
+                <span class="project-card-techstack fw-bold">
+                  <img class="project-card-techstack-img" alt="Tech Stack Logo" src="/assets/svg/javascript.svg" />
+                  <p>JavaScript</p>
+                </span>
+              </div>
+              <p class="project-card-desc">
+                I've built this project using Python, LaTeX, HTML, CSS, and
+                JavaScript to make practicing competition problems more random
+                and interactive. It converts your LaTeX problem files into CSV
+                or JSON, which can then be loaded into the web app as a
+                problem database. The app turns the database into a spinning
+                gacha machine, so you can randomly pick problems instead of
+                solving them in the original contest order. You can use it for
+                individual practice or challenge a friend to see who can solve
+                the selected problem first. The project is open to use, and
+                you can clone it if you're familiar with GitHub.
+              </p>
+            </div>
+            <div class="project-card-footer">
+              <div role="group" class="project-card-button-container" data-orientation="horizontal">
+                <button class="project-card-button-detail fw-medium" type="button">
+                  Details<span class="project-card-button-icon fa-solid fa-circle-arrow-right"></span>
+                </button>
+                <a target="_blank" class="project-card-button-preview fw-medium" type="button"
+                  href="https://alzimna.github.io/Math-Gacha/">Preview<span
+                    class="project-card-button-icon fa-solid fa-eye"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="app-footer">
@@ -84,16 +255,47 @@
       <a href="https://github.com/alzimna" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
         <i class="fa-brands fa-github"></i>
       </a>
-      <a href="https://linkedin.com/in/alzimna-badril-umam" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+      <a href="https://linkedin.com/in/alzimna-badril-umam" target="_blank" rel="noopener" aria-label="LinkedIn"
+        title="LinkedIn">
         <i class="fa-brands fa-linkedin"></i>
       </a>
     </div>
     <p class="app-footer-copy">© 2026 Alzimna Badril Umam</p>
   </footer>
+  <div class="modal-container" id="myModal" tabindex="-1">
+    <section class="modal-content" role="dialog" tabindex="-1" aria-modal="true" style="opacity: 1; transform: none">
+      <header class="modal-header fw-semibold" id="modal-header">
+        <h2 class="modal-heading fw-bold"></h2>
+      </header>
+      <button type="button" aria-label="Close" class="modal-button-x">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-body" id="modal-body">
+        <div class="modal-image-container"></div>
+        <div class="modal-techstack-container"></div>
+        <h2 class="modal-desc-heading fw-bold">Description</h2>
+        <p class="modal-desc"></p>
+      </div>
+      <footer class="modal-footer">
+        <a class="modal-repo-btn fw-semibold dark-shadow" target="_blank">
+          <span class="modal-repo-icon"><i class="fa-brands fa-github" stroke="currentColor" fill="currentColor"
+              stroke-width="0" viewBox="0 0 496 512" font-size="1.5rem" height="1em" width="1em"></i></span>Project
+          Repository
+        </a>
+        <button type="button" class="modal-button-close fw-semibold dark-shadow">
+          Close
+        </button>
+      </footer>
+    </section>
+  </div>
 
   <script src="js/dark_theme.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/mobile_touch_controll.js"></script>
   <script src="js/transition_tracker.js"></script>
+  <script src="js/typing_effect.js"></script>
+  <script src="js/modal.js"></script>
 </body>
+
 </html>
