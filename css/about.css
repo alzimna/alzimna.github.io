@@ -50,14 +50,10 @@ h2.about-title-text {
 
 .about-content {
     width: 100%;
-    -webkit-margin-start: auto;
     margin-inline-start: auto;
-    -webkit-margin-end: auto;
     margin-inline-end: auto;
     max-width: 1024px;
-    -webkit-padding-start: 2rem;
     padding-inline-start: 2rem;
-    -webkit-padding-end: 2rem;
     padding-inline-end: 2rem;
 
     @media screen and (min-width: 650px) {

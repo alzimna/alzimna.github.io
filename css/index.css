@@ -24,7 +24,7 @@ header {
   width: min(320px,35vw);
   aspect-ratio: 1 / 1;
 
-  @media (max-width: 760px){
+  @media (max-width: 650px){
     width: 250px;
   }
 }
@@ -86,7 +86,7 @@ span.name {
 .typewriter-effect {
   display: flex;
 
-  @media (max-width: 760px){
+  @media (max-width: 650px){
     align-items: center;
     justify-content: center;
   }
@@ -100,7 +100,7 @@ span.name {
   white-space: nowrap;
   overflow: hidden;
 
-  @media (max-width: 760px){
+  @media (max-width: 650px){
     font-size: clamp(1rem, 1.5vw, 1.75rem);
   }
 }
@@ -209,7 +209,7 @@ span.name {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 650px) {
   .hero {
     flex-direction: column;
     text-align: center;
