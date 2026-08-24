@@ -186,7 +186,7 @@ span.name {
     text-decoration: none;
     color: var(--text-primary);
     font-weight: 600;
-    font-size: clamp(0.75rem, 1vw, 1.5rem);
+    font-size: clamp(0.75rem, 1vw, 1rem);
 
     animation: bounce 1.5s infinite;
 }

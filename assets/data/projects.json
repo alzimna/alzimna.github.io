@@ -1,0 +1,76 @@
+[
+    {
+        "id": "project_1",
+        "title": "Personal Portfolio",
+        "image": "/image/project_1.PNG",
+        "github": "https://github.com/alzimna/alzimna.github.io",
+        "preview": "https://alzimna.github.io",
+        "techstack": [
+            {
+                "name": "HTML",
+                "icon": "/assets/svg/html.svg"
+            },
+            {
+                "name": "CSS",
+                "icon": "/assets/svg/css.svg"
+            },
+            {
+                "name": "JavaScript",
+                "icon": "/assets/svg/javascript.svg"
+            }
+        ],
+        "description": "I've built my personal web-based portfolio using HTML, CSS, and JavaScript, with GitHub Pages as the deployment platform. It presents my resume as a scrollable page, showcases the GitHub repositories of my projects, and provides links to live demos when available. Everything is open to use, and you can clone the projects if you're familiar with GitHub. Many of my projects are built to solve my own problems, while also helping others who may have similar needs."
+    },
+    {
+        "id": "project_2",
+        "title": "Math Gacha",
+        "image": "/image/project_2.PNG",
+        "github": "https://github.com/alzimna/Math-Gacha",
+        "preview": "https://alzimna.github.io/Math-Gacha/",
+        "techstack": [
+            {
+                "name": "Python",
+                "icon": "/assets/svg/python.svg"
+            },
+            {
+                "name": "Latex",
+                "icon": "/assets/svg/latex.svg"
+            },
+            {
+                "name": "HTML",
+                "icon": "/assets/svg/html.svg"
+            },
+            {
+                "name": "CSS",
+                "icon": "/assets/svg/css.svg"
+            },
+            {
+                "name": "JavaScript",
+                "icon": "/assets/svg/javascript.svg"
+            }
+        ],
+        "description": "I've built this project using Python, LaTeX, HTML, CSS, and JavaScript to make practicing competition problems more random and interactive. It converts your LaTeX problem files into CSV or JSON, which can then be loaded into the web app as a problem database. The app turns the database into a spinning gacha machine, so you can randomly pick problems instead of solving them in the original contest order. You can use it for individual practice or challenge a friend to see who can solve the selected problem first. The project is open to use, and you can clone it if you're familiar with GitHub."
+    },
+    {
+        "id": "project_3",
+        "title": "AMC Problem Scraper",
+        "image": "/image/project_3.PNG",
+        "github": "https://github.com/alzimna/AMC-Problems-Scraper",
+        "preview": "https://github.com/alzimna/AMC-Problems-Scraper",
+        "techstack": [
+            {
+                "name": "Python",
+                "icon": "/assets/svg/python.svg"
+            },
+            {
+                "name": "Latex",
+                "icon": "/assets/svg/latex.svg"
+            },
+            {
+                "name": "HTML",
+                "icon": "/assets/svg/html.svg"
+            }
+        ],
+        "description": "This repository contains Python scripts for scraping AMC problems and solutions from the Art of Problem Solving website. It is built mainly using BeautifulSoup and Selenium in Python. Through this project, I also learned about data design, as a large number of interconnected data points need to be managed. This project can help you collect a large number of high-level mathematics problems for daily student practice or teaching materials. Besides the scraped results in JSON format, I also provide TeX files for each year of the AIME contest, with plans to expand to other AMC competitions in the future. However, I do not encourage unethical use of the scraped content, such as commercializing it. My primary objective is to make useful mathematics olympiad materials more accessible."
+    }
+]

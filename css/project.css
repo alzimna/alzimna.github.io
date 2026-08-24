@@ -95,7 +95,7 @@ p.project-heading {
 .project-cards-container {
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   width: 100%;
   margin-inline-start: 0px;
@@ -114,16 +114,26 @@ p.project-heading {
   display: flex;
   flex-direction: column;
   position: relative;
-  min-width: 0px;
+  height: 575px;
   word-wrap: break-word;
   background-color: var(--color1);
   border-radius: 0.75rem;
   color: var(--text-primary);
   transition: all 300ms;
+  border:solid 2px var(--nav-border);
+
+  @media screen and (max-width: 650px) {
+    height: 500px;
+  }
+}
+
+.project-card-container:hover {
+    cursor:grab;
+    border:solid 4px var(--color8);
 }
 
 .project-card-body {
-  padding: 1.25rem;
+  padding: 1rem;
   flex: 1 1 0%;
   display: flex;
   flex-direction: column;
@@ -189,11 +199,11 @@ p.project-heading {
 span.project-card-techstack {
   white-space: nowrap;
   vertical-align: middle;
-  padding-inline-start: 0.25rem;
-  padding-inline-end: 0.25rem;
+  padding-inline-start: 0.1rem;
+  padding-inline-end: 0.1rem;
 
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 0.45rem;
 
   border-radius: 10px;
   background: var(--nav-bg);
@@ -202,28 +212,33 @@ span.project-card-techstack {
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .project-card-techstack-img {
-  height: 1rem;
-  width: 1rem;
+  height: 0.75rem;
+  width: 0.75rem;
 }
 
 .project-card-desc {
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
   overflow: hidden;
-  font-size: clamp(0.75rem, 1.6vw, 1rem);
+  font-size: clamp(0.5rem, 1.6vw, 0.75rem);
   text-align: justify;
+
+  @media screen and (max-width: 650px) {
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
 }
 
 .project-card-footer {
   display: flex;
-  padding: 1.25rem;
+  padding: 0 20px 20px 20px;
 }
 
 .project-card-button-container {
@@ -252,9 +267,9 @@ a.project-card-button-preview {
   color: var(--text-primary);
   text-decoration: none;
 
-  height: 2.5rem;
-  min-width: 2.5rem;
-  font-size: 1rem;
+  height: 1.5rem;
+  min-width: 1.5rem;
+  font-size: 0.75rem;
   padding-inline-start: 1rem;
   padding-inline-end: 1rem;
 
@@ -272,45 +287,6 @@ a.project-card-button-preview {
   align-self: center;
   flex-shrink: 0;
   margin-inline-start: 0.5rem;
-}
-
-
-.project-view-all {
-  display: inline-flex;
-  appearance: none;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
-
-  position: relative;
-  white-space: nowrap;
-  vertical-align: middle;
-  line-height: 1.2;
-
-  border-radius: 10px;
-  height: 3rem;
-  min-width: 2.5rem;
-  font-size: 1rem;
-  padding: 12px 26px;
-  border: 1px solid transparent;
-
-  background-color: var(--btn-primary);
-  color: var(--btn-text-primary);
-  text-decoration: none;
-  
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.project-view-all:hover {
-  transform: translateY(-2px);
-  opacity: 0.95;
-}
-
-.project-view-all-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2.5rem;
 }
 
 .project-card-blur-repo {
