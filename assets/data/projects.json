@@ -76,7 +76,7 @@
     {
         "id": "project_4",
         "title": "Math Dojo",
-        "image": "/image/project_4.PNG",
+        "image": "/image/project_4.png",
         "github": "https://github.com/alzimna/Math-Dojo",
         "preview": "https://alzimna.github.io/Math-Dojo/",
         "techstack": [
