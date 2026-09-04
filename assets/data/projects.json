@@ -72,5 +72,27 @@
             }
         ],
         "description": "This repository contains Python scripts for scraping AMC problems and solutions from the Art of Problem Solving website. It is built mainly using BeautifulSoup and Selenium in Python. Through this project, I also learned about data design, as a large number of interconnected data points need to be managed. This project can help you collect a large number of high-level mathematics problems for daily student practice or teaching materials. Besides the scraped results in JSON format, I also provide TeX files for each year of the AIME contest, with plans to expand to other AMC competitions in the future. However, I do not encourage unethical use of the scraped content, such as commercializing it. My primary objective is to make useful mathematics olympiad materials more accessible."
+    },
+    {
+        "id": "project_4",
+        "title": "Math Dojo",
+        "image": "/image/project_4.PNG",
+        "github": "https://github.com/alzimna/Math-Dojo",
+        "preview": "https://alzimna.github.io/Math-Dojo/",
+        "techstack": [
+            {
+                "name": "HTML",
+                "icon": "/assets/svg/html.svg"
+            },
+            {
+                "name": "CSS",
+                "icon": "/assets/svg/css.svg"
+            },
+            {
+                "name": "JavaScript",
+                "icon": "/assets/svg/javascript.svg"
+            }
+        ],
+        "description": "I built this project using HTML, CSS, and vanilla JavaScript, with Grid.js for the problem table and Swiper.js for flipping through multiple solutions. You pick a contest, either the Indonesia Regional Competition or AIME, then filter by stage or version and year. The app only loads the JSON for the year you actually open, so it stays fast even as more problems get added. Each problem page shows the statement, an optional figure, the answer, and any written solutions. It runs entirely on GitHub Pages with no backend and no login, so you can open the live demo and start solving right away. The project is open to use, and you can clone it if you're familiar with GitHub."    
     }
 ]
